@@ -1,0 +1,16 @@
+[README.md](https://github.com/user-attachments/files/27798051/README.md)
+# Auto-Knowledge Guard
+
+## 项目简介
+这是一个基于 Multi-Agent 协作架构的企业级动态知识库维护系统。它解决了传统 RAG 应用中知识时效性差和信息冗余冲突的核心痛点。
+
+## 核心特性
+- **多 Agent 协作**：包含感知 Agent、逻辑分析 Agent、冲突解决 Agent。
+- **长链推理 (CoT)**：在处理文档冲突时进行深层逻辑推导。
+- **闭环验证**：自动生成测试集并进行 RAG 效果评估。
+
+## 目录结构
+- `/agents`: Agent 逻辑定义
+- `/config`: 系统配置文件
+- `/logs`: 运行日志示例
+- `/eval`: 评估报告
