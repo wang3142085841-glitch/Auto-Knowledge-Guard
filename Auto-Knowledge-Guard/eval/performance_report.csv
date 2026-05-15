@@ -1,0 +1,5 @@
+Metric,Before_Optimization,After_Optimization
+Hallucination_Rate,15%,2.8%
+Knowledge_Sync_Latency,48h,15m
+Retrieval_Accuracy,72%,94%
+Human_Effort_Hours,40/week,4/week

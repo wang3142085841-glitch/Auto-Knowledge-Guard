@@ -1,0 +1,20 @@
+pipeline:
+  name: Multi-Agent Knowledge Sync
+  version: 1.2.0
+  agents:
+    - id: monitor_agent
+      role: Perceiver
+      model: gemini-1.5-flash
+      description: "监听云端文档库变更，执行增量提取"
+    - id: analyst_agent
+      role: Reasoning_Analyst
+      model: gemini-1.5-pro
+      logic_mode: Chain-of-Thought
+      prompt_template: "对比 {old_content} 与 {new_content}，识别逻辑差异并标记冲突点。"
+    - id: resolver_agent
+      role: Conflict_Resolver
+      strategy: ReAct
+      tools: [company_policy_search, version_history_viewer]
+  storage:
+    vector_db: Pinecone
+    index_name: enterprise-kb-v3
